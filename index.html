@@ -942,6 +942,14 @@
                 initGame();
             }, 5000);
         }
+      </script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        const badge = document.querySelector('img[alt="Powered by Netlify"], a.netlify-badge');
+        if (badge) {
+          badge.closest('a').remove();
+        }
+      });
     </script>
 </body>
 </html>

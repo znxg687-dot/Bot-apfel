@@ -150,8 +150,8 @@
         }
 
         .video-container {
-            width: 100%;
-            max-width: 600px;
+            width: fit-content;
+            max-width: 100%;
             border-radius: 15px;
             overflow: hidden;
             border: 2px solid var(--gold-color);
@@ -159,7 +159,11 @@
             margin-bottom: 25px;
         }
 
-        video { width: 100%; display: block; }
+        video { 
+            max-width: 100%; 
+            height: auto; 
+            display: block; 
+        }
 
         .promo-section {
             display: flex;
@@ -611,11 +615,11 @@
             <i class="fas fa-apple-alt glowing-apple-logo"></i>
             <h1 class="welcome-title">مرحبا بك في بوت التفاحة</h1>
             
-<div class="video-instruction">تابع الفديو للنهاية حتى تفهم ماذا تفعل قبل استعمال هذا البوت</div>
-
-<div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-    <iframe src="https://drive.google.com/file/d/1t3XzMA110Z1Q7JnfsBvGoZRkRamV9vCS/preview" width="100%" height="100%" style="position: absolute; top: 0; left: 0; border: none;" allow="autoplay" allowfullscreen></iframe>
-</div>
+            <div class="video-instruction">تابع الفديو للنهاية حتى تفهم ماذا تفعل قبل استعمال هذا البوت</div>
+            
+            <div class="video-container">
+                <video src="video.mp4" controls poster="https://via.placeholder.com/600x300/000000/ffd700?text=Apple+Bot+Video"></video>
+            </div>
 
             <div class="promo-section">
                 <div class="warning-circle-indicator"></div>

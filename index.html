@@ -943,13 +943,15 @@
             }, 5000);
         }
       </script>
-    <script>
-      window.addEventListener('DOMContentLoaded', (event) => {
-        const badge = document.querySelector('img[alt="Powered by Netlify"], a.netlify-badge');
-        if (badge) {
-          badge.closest('a').remove();
-        }
-      });
-    </script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const allLinks = document.querySelectorAll('a');
+    allLinks.forEach(link => {
+      if (link.href && link.href.includes('netlify.com') || link.innerText.includes('Powered by Netlify')) {
+        link.remove();
+      }
+    });
+  });
+</script>
 </body>
 </html>
